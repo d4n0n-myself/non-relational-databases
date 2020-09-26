@@ -1,0 +1,54 @@
+{
+    "EbsOptimized": false,
+    "BlockDeviceMappings": [
+        {
+            "DeviceName": "/dev/sda1",
+            "Ebs": {
+                "Encrypted": false,
+                "DeleteOnTermination": true,
+                "SnapshotId": "snap-0e523815c0ee5d659",
+                "VolumeSize": 35,
+                "VolumeType": "gp2"
+            }
+        }
+    ],
+    "NetworkInterfaces": [{
+        "AssociatePublicIpAddress": false,
+        "DeviceIndex": 0,
+        "SubnetId": "subnet-426d0b4c"
+    }],
+    "ImageId": "ami-0817d428a6fb68645",
+    "InstanceType": "t2.large",
+    "KeyName": "cassandra-ec2",
+    "Monitoring": {
+        "Enabled": false
+    },
+    "Placement": {
+        "AvailabilityZone": "us-east-1f",
+        "GroupName": "",
+        "Tenancy": "default"
+    },
+    "DisableApiTermination": false,
+    "InstanceInitiatedShutdownBehavior": "stop",
+    "TagSpecifications": [{
+        "ResourceType": "instance",
+        "Tags": [{
+            "Key":"Name",
+            "Value":"cassandra"
+        }]
+    }],
+    "CreditSpecification": {
+        "CpuCredits": "standard"
+    },
+    "CapacityReservationSpecification": {
+        "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+        "Configured": false
+    },
+    "MetadataOptions": {
+        "HttpTokens": "optional",
+        "HttpPutResponseHopLimit": 1,
+        "HttpEndpoint": "enabled"
+    }
+}
